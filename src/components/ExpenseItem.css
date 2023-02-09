@@ -1,0 +1,17 @@
+body {
+  background-color: black;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(1, 15, 10, 0.861);
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid white;
+}
+.amount {
+  background-color: blueviolet;
+  padding: 20px;
+  border: 6px solid white;
+  border-radius: 20px;
+}
