@@ -1,0 +1,32 @@
+.outercontainer {
+  width: 100vw;
+  box-sizing: border-box;
+  font-size: large;
+}
+.wrapperform {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  color: #000;
+  margin: 0px auto;
+  padding: 20px;
+  width: 47%;
+}
+input {
+  padding: 10px 0px;
+  border-radius: 5px;
+  border: unset;
+  outline: none;
+  width: 100%;
+}
+.wrapperform * {
+  margin: 2px 0px;
+}
+button {
+  padding: 10px;
+  background-color: aquamarine;
+  color: #000;
+  border-radius: 10px;
+}

@@ -1,0 +1,19 @@
+.date {
+  border: 3px solid white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(17, 15, 15, 0.924);
+  text-align: center;
+  margin: 10px 0px;
+}
+.month,
+.year,
+.day {
+  padding: 10px 50px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+.day {
+  font-size: 25pt;
+}

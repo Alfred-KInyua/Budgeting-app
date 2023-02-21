@@ -1,18 +1,45 @@
 body {
-  background-color: black;
+  box-sizing: border-box;
+  background-color: rgb(89, 85, 85);
 }
 .container {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: rgba(1, 15, 10, 0.861);
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 50px;
+  background-color: rgba(5, 132, 88, 0.861);
+
+  border-radius: 10px;
   border: 1px solid white;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.bg {
+  background-color: #221818d0;
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+.enclose {
+  width: 100%;
+  padding: 5px 0px;
 }
 .amount {
   background-color: blueviolet;
-  padding: 20px;
+  padding: 10px;
   border: 6px solid white;
   border-radius: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
 }
