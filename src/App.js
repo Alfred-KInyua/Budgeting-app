@@ -24,14 +24,19 @@ const expenses = [
 ];
 
 function App() {
+  const receivedata = (dataItems) => {
+    const elements = {
+      ...dataItems,
+    };
+    console.log(elements);
+  };
   return (
     <div className="App">
       <h1>App file</h1>
-      <NewExpense />
+      <NewExpense someData={receivedata} />
 
       {expenses.map((expe) => (
         <div key={expe.id}>
-          {' '}
           <ExpenseItem
             title={expe.title}
             date={expe.date}
