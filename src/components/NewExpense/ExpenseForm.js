@@ -14,35 +14,49 @@ function ExpenseForm() {
   const AmountHandler = (e) => {
     setAmount(e.target.value);
   };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const dataElements = {
+      title: title,
+      date: new Date(date),
+      amount: amount,
+    };
+    console.log(dataElements);
+    setAmount('');
+    setDate('');
+    setTitle('');
+  };
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="outercontainer">
         <div className="wrapperform">
           <div className="titlecontrol">
-            <label>{title}</label>
+            <label>title</label>
             <br />
-            <input type="text" onChange={titleHandler} />
+            <input type="text" value={title} onChange={titleHandler} />
           </div>
           <div className="titlecontrol">
-            <label>{date}</label> <br />
+            <label>date</label> <br />
             <input
               type="date"
               min="2019-1-1"
               max="2023-12-31"
+              value={date}
               onChange={dateHandler}
             />
           </div>
           <div className="amountcontrol">
-            <label>{amount}</label> <br />
+            <label>amount</label> <br />
             <input
               type="number"
               min="0.01"
               step="0.01"
+              value={amount}
               onChange={AmountHandler}
             />
           </div>
           <div className="amountcontrol">
-            <button>Add Expense</button>
+            <button type="submit">Add Expense</button>
           </div>
         </div>
       </div>
