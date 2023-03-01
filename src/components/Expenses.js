@@ -3,16 +3,22 @@ import ExpenseItem from './ExpenseItem';
 import ExpenseFilter from './ExpenseFilter';
 import ExpenseForm from './NewExpense/ExpenseForm';
 
-function Expenses({ expenses }) {
+function Expenses({ expenses, moreData }) {
   const [filteredYear, setFilteredYear] = useState('2020');
 
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
-
+  const newExpenseHandler = (data) => {
+    const elements = {
+      ...data,
+      id: Math.floor(Math.random() * 10) + 1,
+    };
+    moreData(elements);
+  };
   return (
     <div className="App">
-      <ExpenseForm />
+      <ExpenseForm data={newExpenseHandler} />
       <ExpenseFilter
         selected={filteredYear}
         onChangeFilter={filterChangeHandler}
