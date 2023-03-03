@@ -28,7 +28,7 @@ function ExpenseForm({ data }) {
   };
   return (
     <form onSubmit={submitHandler}>
-      <div className="outercontainer">
+      <div className="outercontainer plus">
         <div className="wrapperform">
           <div className="titlecontrol">
             <label>title</label>
