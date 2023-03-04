@@ -35,7 +35,7 @@ function ExpenseForm({ data }) {
             <br />
             <input type="text" value={title} onChange={titleHandler} />
           </div>
-          <div className="titlecontrol">
+          <div className="titlecontrol myTitle">
             <label>date</label> <br />
             <input
               type="date"
